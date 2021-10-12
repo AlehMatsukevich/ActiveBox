@@ -28,7 +28,8 @@ p{
 .container {
     margin: 0 auto; /*выравнивание по середине способ 1*/
     width: 100%; /*ширина блока на весь экран*/
-    max-width: 1170px; /*максимальная ширина блока с контентом*/
+    max-width: 1200px; /*максимальная ширина блока с контентом*/
+    padding: 0 15px;
 }
 
 
@@ -217,3 +218,120 @@ p{
     color: #fff;
     font-weight: 400;
 }
+
+/*********** team **********/
+.team {
+    width: 100%;
+    margin: 100px 0 70px;
+
+}
+.team__inner{
+    display:flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+.team__item{
+    width: 25%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+.team__img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.team__title {
+    color: #2d3033;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+.team__position{
+    text-transform: uppercase;
+    color: #e84545;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+.team__text{
+    font-size: 14px;
+    color: #6c7279;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+/* **********social************** */
+.social {
+    display: flex;
+    
+}
+.social__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e8ecee;
+    margin-right: 4px;
+    background: #fff;
+    transition: background .1s linear;
+}
+.social__item:hover{
+    background: #e8ecee;
+}
+.social__item:hover .social__icon{
+    fill:#e84545;
+}
+.social__icon{
+    display: block;
+    fill: #c6cacc;
+    height: 18px;
+    transition: fill .1s linear;
+}
+
+/* **********reviews************** */
+.reviews {
+    overflow: hidden;
+    background: #53354a;
+}
+.reviews__item{
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+.reviews__photo{
+    width: 50%;
+    height: 500px;
+    position: relative;
+}
+.reviews__img {
+    top: 50%;
+    right: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+    position: absolute;
+}
+.reviews__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding-left: 80px;
+}
+.reviews__text {
+    font-family: 'Cardo', serif;
+    font-size: 36px;
+    font-style: italic;
+    line-height: 1.2;
+    color: #fff;
+    margin-bottom: 25px;
+
+}
+.reviews__author {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    
+}
+
