@@ -49,6 +49,16 @@ p{
     border-bottom: 1px solid #6c7279;
     align-items: center; /*выравниваем все элементы по центру*/
 }
+.header.fixed{
+    height: auto;
+    position: fixed;
+    background: #31344e;
+}
+
+.header.fixed .header__inner{
+    padding: 15px 0;
+    border: 0;
+}
 
 /************nav**********/
 .nav {
@@ -316,9 +326,18 @@ p{
     overflow: hidden;
     background: #53354a;
 }
+.reviews__slider{
+    height: 500px;
+    overflow: hidden;
+}
+
+.reviews__slider.slick-initialized {
+    height: auto;
+}
 .reviews__item{
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
     
     
 }
@@ -357,6 +376,43 @@ p{
     color: #fff;
     
 }
+.slick-dots{
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.slick-dots li {
+    margin: 15px 3px;
+}
+.slick-dots button {
+    background: #fff;
+    border: 0;
+    padding: 0;
+    font-size: 0;
+    color: transparent;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    opacity: .5;
+    cursor: pointer;
+
+}
+.slick-dots button:focus{
+    outline: none;
+}
+.slick-dots .slick-active button {
+    opacity: 1;
+}
+
+
+
 
 /* **********download************** */
 .download {
@@ -464,9 +520,24 @@ p{
 @media (max-width: 991px){
     .intro__title{
         font-size: 40px;
+        
     }
     .nav{
         display: none;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        flex-direction: column;
+        width: 100%;
+        text-align: right;
+        background: #31344e;
+
+    }
+    .nav.show{
+        display: flex;
+    }
+    .nav__link{
+        padding: 9px 15px;
     }
     .burger{
         display: block;
@@ -495,7 +566,6 @@ p{
         padding-left: 0;
         padding-bottom: 40px;
     }
-
 }
 @media(max-width: 767px){
     .intro{
